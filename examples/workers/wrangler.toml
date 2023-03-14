@@ -1,0 +1,7 @@
+name = "workers"
+compatibility_date = "2023-02-24"
+main = "./build/worker.mjs"
+node_compat = true
+
+[build]
+command = "make build"
