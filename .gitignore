@@ -51,4 +51,4 @@ tinygo
 *memo*
 
 # wasm
-build
+build/

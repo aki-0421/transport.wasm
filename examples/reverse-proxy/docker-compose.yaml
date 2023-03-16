@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  app:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8976:8976"
+    volumes:
+      - ./:/usr/src/app:cached
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
