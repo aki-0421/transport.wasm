@@ -9,8 +9,14 @@ import (
 	"github.com/syumai/workers"
 )
 
-func addUserAgent(r *http.Request) error {
-	r.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0")
+func addUserAgent(req *http.Request) error {
+	req.Header.Set("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0")
+	return nil
+}
+
+func noCache(res *http.Response) error {
+	res.Header.Del("etag")
+	res.Header.Set("cache-control", "no-cache")
 	return nil
 }
 
@@ -19,6 +25,7 @@ func main() {
 
 	t, err := transport.New(
 		transport.WithModifyRequestFunc(addUserAgent),
+		transport.WithModifyResponseFunc(noCache),
 	)
 	if err != nil {
 		panic(err)
