@@ -20,6 +20,37 @@ Go written Implement HTTP Transport. (Include useful hooks for Edge computing)
 # simple example
 
 ```go
+package main
+
+import (
+	"fmt"
+	"io"
+	"net/http"
+
+	"github.com/aki-0421/transport.wasm"
+)
+
+func main() {
+	t, err := transport.New()
+	if err != nil {
+		panic(err)
+	}
+
+	cli := &http.Client{
+		Transport: t,
+	}
+	resp, err := cli.Get("https://api.github.com/repos/aki-0421/transport.wasm/stargazers")
+	if err != nil {
+		panic(err)
+	}
+
+	b, err := io.ReadAll(resp.Body)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(string(b))
+}
 
 ```
 
