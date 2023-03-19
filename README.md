@@ -31,13 +31,8 @@ import (
 )
 
 func main() {
-	t, err := transport.New()
-	if err != nil {
-		panic(err)
-	}
-
 	cli := &http.Client{
-		Transport: t,
+		Transport: transport.New(),
 	}
 	resp, err := cli.Get("https://api.github.com/repos/aki-0421/transport.wasm/stargazers")
 	if err != nil {

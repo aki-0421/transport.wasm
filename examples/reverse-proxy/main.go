@@ -23,13 +23,10 @@ func noCache(res *http.Response) error {
 func main() {
 	r := chi.NewRouter()
 
-	t, err := transport.New(
+	t := transport.New(
 		transport.WithModifyRequestFunc(addUserAgent),
 		transport.WithModifyResponseFunc(noCache),
 	)
-	if err != nil {
-		panic(err)
-	}
 
 	r.HandleFunc("/*", func(w http.ResponseWriter, r *http.Request) {
 		proxy := httputil.ReverseProxy{

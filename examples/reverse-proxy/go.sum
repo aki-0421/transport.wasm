@@ -1,5 +1,7 @@
-github.com/aki-0421/transport.wasm v0.0.0-20230314125638-f261ae6fc704 h1:VFi+TxMpgASv7CJgE4loyXYlmdKpfeGma/KW5cb94q4=
-github.com/aki-0421/transport.wasm v0.0.0-20230314125638-f261ae6fc704/go.mod h1:eO6pWMVNCkbtGifNRsUS606GMXyFA+I0kOihljtynNw=
+github.com/aki-0421/transport.wasm v1.0.0 h1:hf57UajKFmYBRqUAcFts2hRsFMEi/pfZ4i5CGwiV560=
+github.com/aki-0421/transport.wasm v1.0.0/go.mod h1:eO6pWMVNCkbtGifNRsUS606GMXyFA+I0kOihljtynNw=
+github.com/aki-0421/transport.wasm v1.0.1 h1:IWBsrHln6KRea9UoThV4kXfor7/c4+ikDeibfpLybYw=
+github.com/aki-0421/transport.wasm v1.0.1/go.mod h1:eO6pWMVNCkbtGifNRsUS606GMXyFA+I0kOihljtynNw=
 github.com/go-chi/chi/v5 v5.0.8 h1:lD+NLqFcAi1ovnVZpsnObHGW4xb4J8lNmoYVfECH1Y0=
 github.com/go-chi/chi/v5 v5.0.8/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
 github.com/syumai/workers v0.10.2 h1:X2TRBd5reHKeNaNiUHY0xjvePQ1VBEKBqW/wJWG/FRo=
