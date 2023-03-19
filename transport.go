@@ -30,7 +30,7 @@ func (t *Transport) SetRedirect(redirect FetchRedirect) {
 }
 
 // New returns Transport struct
-func New(opts ...Option) (*Transport, error) {
+func New(opts ...Option) *Transport {
 	t := &Transport{
 		Mode:     FetchModeSameOrigin,
 		Redirect: FetchRedirectFollow,
@@ -40,5 +40,5 @@ func New(opts ...Option) (*Transport, error) {
 		opt(t)
 	}
 
-	return t, nil
+	return t
 }
